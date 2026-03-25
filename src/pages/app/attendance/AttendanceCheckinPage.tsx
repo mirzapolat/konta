@@ -326,12 +326,13 @@ export default function AttendanceCheckinPage() {
                 )}
               </p>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <Button
                 variant="ghost"
                 size="sm"
                 icon={showCounters ? <EyeOff size={14} /> : <Eye size={14} />}
                 onClick={() => setShowCounters(s => !s)}
+                className="hidden sm:flex"
               >
                 {showCounters ? t('attendance.hide_counters') : t('attendance.show_counters')}
               </Button>

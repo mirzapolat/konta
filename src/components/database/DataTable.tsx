@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react'
-import { ChevronUp, ChevronDown, Search, SlidersHorizontal, Trash2 } from 'lucide-react'
+import { ChevronUp, ChevronDown, Search, Trash2 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'

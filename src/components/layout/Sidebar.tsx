@@ -17,7 +17,7 @@ export default function Sidebar() {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const { profile, logout } = useAuthStore()
-  const { currentWorkspace, workspaces, setCurrentWorkspace } = useWorkspaceStore()
+  const { currentWorkspace, workspaces, setCurrentWorkspace, setWorkspaces } = useWorkspaceStore()
   const [collapsed, setCollapsed] = useState(false)
   const [wsOpen, setWsOpen] = useState(false)
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false)
@@ -63,7 +63,6 @@ export default function Sidebar() {
         status: 'owner',
       })
       setCurrentWorkspace(data)
-      const { setWorkspaces } = useWorkspaceStore.getState()
       setWorkspaces([...workspaces, data])
       toast.success('Workspace created')
     }
@@ -74,6 +73,7 @@ export default function Sidebar() {
     <>
       <aside className={cn(
         'h-screen flex flex-col bg-white border-r border-gray-200 transition-all duration-200 shrink-0',
+        'hidden sm:flex',
         collapsed ? 'w-14' : 'w-56'
       )}>
         {/* App logo + collapse button */}
@@ -224,6 +224,36 @@ export default function Sidebar() {
           </button>
         </div>
       </aside>
+
+      {/* Mobile bottom nav */}
+      <nav className="sm:hidden fixed bottom-0 left-0 right-0 z-30 bg-white border-t border-gray-200 flex items-center justify-around px-2 py-1.5">
+        {mainNav.map(item => (
+          <NavLink key={item.to} to={item.to} end={item.to === '/app/projects'}>
+            {({ isActive }) => (
+              <div className={cn(
+                'flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors',
+                isActive ? 'text-gray-900' : 'text-gray-400'
+              )}>
+                {item.icon}
+                <span className="text-[10px]">{item.label}</span>
+              </div>
+            )}
+          </NavLink>
+        ))}
+        {bottomNav.map(item => (
+          <NavLink key={item.to} to={item.to}>
+            {({ isActive }) => (
+              <div className={cn(
+                'flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors',
+                isActive ? 'text-gray-900' : 'text-gray-400'
+              )}>
+                {item.icon}
+                <span className="text-[10px]">{item.label}</span>
+              </div>
+            )}
+          </NavLink>
+        ))}
+      </nav>
 
       {/* Click-away for workspace dropdown */}
       {wsOpen && <div className="fixed inset-0 z-40" onClick={() => setWsOpen(false)} />}

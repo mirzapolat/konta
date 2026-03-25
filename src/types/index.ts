@@ -137,6 +137,7 @@ export interface RsvpObject {
   fields: RsvpField[]
   active: boolean
   email_receipts: boolean
+  branding_enabled?: boolean
 }
 
 export interface RsvpLink {

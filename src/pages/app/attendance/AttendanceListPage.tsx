@@ -167,7 +167,7 @@ export default function AttendanceListPage() {
       />
 
       {/* Filter tabs */}
-      <div className="flex gap-1 mb-4">
+      <div className="flex flex-wrap gap-1 mb-4">
         {(['all', 'attended', 'excused', 'collision'] as const).map(f => (
           <button
             key={f}
