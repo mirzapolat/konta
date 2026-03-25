@@ -1,0 +1,31 @@
+<svg width="100%" viewBox="0 0 680 680" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    
+    <!-- Shadow for left filled circle -->
+    <radialGradient id="sh1" cx="52%" cy="52%" r="55%" fx="58%" fy="58%">
+      <stop offset="0%" stop-color="#111" stop-opacity="0"/>
+      <stop offset="55%" stop-color="#111" stop-opacity="0"/>
+      <stop offset="72%" stop-color="#111" stop-opacity="0.13"/>
+      <stop offset="83%" stop-color="#111" stop-opacity="0.22"/>
+      <stop offset="92%" stop-color="#111" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#111" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Shadow for right outline circle -->
+    <radialGradient id="sh2" cx="48%" cy="52%" r="55%" fx="42%" fy="58%">
+      <stop offset="0%" stop-color="#111" stop-opacity="0"/>
+      <stop offset="55%" stop-color="#111" stop-opacity="0"/>
+      <stop offset="72%" stop-color="#111" stop-opacity="0.11"/>
+      <stop offset="83%" stop-color="#111" stop-opacity="0.19"/>
+      <stop offset="92%" stop-color="#111" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#111" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Shadow halos -->
+  <ellipse cx="310" cy="352" rx="248" ry="248" fill="url(#sh1)" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <ellipse cx="412" cy="352" rx="248" ry="248" fill="url(#sh2)" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Moons -->
+  <circle cx="300" cy="340" r="210" style="fill:rgb(17, 17, 17);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <circle cx="420" cy="340" r="210" style="fill:none;stroke:rgb(17, 17, 17);color:rgb(251, 251, 254);stroke-width:26px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+</svg>
